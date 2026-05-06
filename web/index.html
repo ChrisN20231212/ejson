@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejson</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">ejson</p>
+        <h1>轻量 JSON 在线解析服务</h1>
+        <p class="subcopy">校验、格式化、压缩、转义与 Unicode 转换都走同一套 HTTP API。</p>
+      </section>
+
+      <section class="workspace">
+        <div class="panel">
+          <div class="panel-head">
+            <label for="editor">内容</label>
+            <span id="status" aria-live="polite"></span>
+          </div>
+          <textarea id="editor" class="editor json_input" spellcheck="false" placeholder="请输入 JSON 或文本，然后连续执行需要的操作"></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="primary" data-action="validate" type="button" id="validate">校验 / 格式化</button>
+          <button type="button" data-action="minify">压缩</button>
+          <button type="button" data-action="escape">转义</button>
+          <button type="button" data-action="unescape">去转义</button>
+          <button type="button" data-action="unicodeDecode">Unicode转中文</button>
+          <button type="button" data-action="unicodeEncode">中文转Unicode</button>
+          <button type="button" id="copy">复制结果</button>
+          <button type="button" id="clear" class="danger">清空</button>
+          <button type="button" id="saveFile">保存本地</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>
